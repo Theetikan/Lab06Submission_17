@@ -43,6 +43,7 @@ class Button(Rectangle):
         else: return False
 
 
+
 pg.init()
 run = True
 win_x, win_y = 800, 480
@@ -59,6 +60,10 @@ while (run):
         btn.r = 255
         btn.g = 0
         btn.b = 0
+    if btn.isMouseOn() and pg.mouse.get_pressed()[0] :
+        btn.r = 139
+        btn.g = 0
+        btn.b = 139
     btn.draw(screen)
 
     pg.display.update()
